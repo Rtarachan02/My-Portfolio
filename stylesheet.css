@@ -9,7 +9,7 @@
 
 body{
     color: #ededed;
-
+    background-color: #081b29;
 }
 .header{
     position: fixed;
@@ -44,6 +44,7 @@ body{
     transition: .3s;
     opacity: 0;
     animation: slideTop 0.5s ease forwards;
+    animation-delay: calc(.2s * var(--i));
 }
 .navbar a:hover{
     color: #0ef;
@@ -79,6 +80,8 @@ body{
 
 .home-content h3:nth-of-type(2){
     margin-bottom: 30px;
+    animation: slideTop 1s ease forwards;
+    animation-delay: .7s;
 }
 
 .home-content h3 span{
@@ -116,6 +119,11 @@ body{
     color: #0ef;
     text-decoration: none;
     margin: 30px 15px 30px 0;
+    transition: .5s ease;
+    opacity: 0;
+    animation: slideLeft 1s ease forwards;
+    animation-delay:calc(.2s*var(--i));
+
 }
 
 .home-sci a:hover{
@@ -133,6 +141,12 @@ body{
     letter-spacing: 1px;
     text-decoration: none;
     font-weight: 600;
+    opacity: 0;
+    animation: slideTop 1s ease forwards;
+    animation-delay:2s;
+    box-shadow: 0 0 5px #0ef,
+         0 0 25px #0ef;
+
 }
 
 .btn-box:hover{
@@ -140,6 +154,32 @@ body{
      0 0 25px cyan, 0 0 50px cyan,
      0 0 100px cyan, 0 0 200px cyan;
  }
+
+
+ /* writing code for the about section */
+.about{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    align-items: center;
+    gap: 1.5rem;
+}
+.about-img img{
+    padding-bottom: 20px;
+    max-width: 630px;
+    height: auto;
+    width: 100%;
+    border-radius: 8px;
+}
+
+.about-text h2{
+    font-size: 60px;
+
+}
+
+.about-text h2 span{
+    color: #0ef;
+}
+
 
  @keyframes slideRight {
     0%{
